@@ -1,10 +1,10 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\Provider;
+namespace MetasenseLTD\OAuth2\Client\Provider;
 
-use Depotwarehouse\OAuth2\Client\Entity\BattleNetUser;
-use Depotwarehouse\OAuth2\Client\Entity\SC2User;
-use Depotwarehouse\OAuth2\Client\Entity\WowUser;
+use MetasenseLTD\OAuth2\Client\Entity\BNetUser;
+use MetasenseLTD\OAuth2\Client\Entity\SC2User;
+use MetasenseLTD\OAuth2\Client\Entity\WowUser;
 use Guzzle\Http\Exception\BadResponseException;
 use League\OAuth2\Client\Exception\IDPException;
 use League\OAuth2\Client\Provider\AbstractProvider;

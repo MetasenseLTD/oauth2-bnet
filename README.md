@@ -10,15 +10,15 @@ for submitting a WoW pull!
 To install, use composer:
 
 ```bash
-composer require depotwarehouse/oauth2-bnet
+composer require metasenseltd/oauth2-bnet
 ```
 
-Usage is the same as the league's OAuth client, using `\Depotwarehouse\OAuth2\Client\Provider\SC2Provider` or
-`\Depotwarehouse\OAuth2\Client\Provider\WowProvider` as the provider.
+Usage is the same as the league's OAuth client, using `\MetasenseLTD\OAuth2\Client\Provider\SC2Provider` or
+`\MetasenseLTD\OAuth2\Client\Provider\WowProvider` as the provider.
 For example:
 
 ```php
-$provider = new \Depotwarehouse\OAuth2\Client\Provider\SC2Provider([
+$provider = new \MetasenseLTD\OAuth2\Client\Provider\SC2Provider([
     'clientId' => "YOUR_CLIENT_ID",
     'clientSecret' => "YOUR_CLIENT_SECRET",
     'redirectUri' => "http://your-redirect-uri",
@@ -34,14 +34,14 @@ if (isset($_GET['code']) && $_GET['code']) {
         'code' => $_GET['code']
     ]);
 
-    // Returns an instance of Depotwarehouse\OAuth2\Client\Entity\SC2User
+    // Returns an instance of MetasenseLTD\OAuth2\Client\Entity\SC2User
     $user = $this->provider->getResourceOwner($token);
 ```
 
 To get to know the data available on an `SC2User` simply inspect the public properties of the class, as they show all the
 available data that has been returned.
 
-Alternatively, for WoW you can use `\Depotwarehouse\OAuth2\Client\Provider\WowProvider` and it will return an object of
+Alternatively, for WoW you can use `\MetasenseLTD\OAuth2\Client\Provider\WowProvider` and it will return an object of
 type `WowUser`. A `WowUser` simply contains a public `$data` property with an array of character objects as `stdClass`s.
 
 There's an example JSON representation below, but I suggest you use inspection to figure out more closely what you're

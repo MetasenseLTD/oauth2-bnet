@@ -1,18 +1,17 @@
 {
-    "name": "depotwarehouse/oauth2-bnet",
+    "name": "metasenseltd/oauth2-bnet",
     "description": "A Battle.net provider for league/oauth2-client",
     "license": "MIT",
     "authors": [
         {
-            "name": "Troy Pavlek",
-            "email": "troy@tpavlek.me",
-            "homepage": "http://tpavlek.me",
+            "name": "Johann Ackerman",
+            "email": "s0v3r31gn@gmail.com",
             "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Depotwarehouse\\OAuth2\\Client\\": "src/"
+            "MetasenseLTD\\OAuth2\\Client\\": "src/"
         }
     },
     "require": {

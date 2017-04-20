@@ -3,7 +3,7 @@
 require '../vendor/autoload.php';
 require 'config.php';
 
-$provider = new \Depotwarehouse\OAuth2\Client\Provider\WowProvider(
+$provider = new \MetasenseLTD\OAuth2\Client\Provider\WowProvider(
     $config
 );
 

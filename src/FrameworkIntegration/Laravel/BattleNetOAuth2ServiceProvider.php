@@ -1,11 +1,11 @@
 <?php
 
-namespace Depotwarehouse\OAuth2\Client\FrameworkIntegration\Laravel;
+namespace MetasenseLTD\OAuth2\Client\FrameworkIntegration\Laravel;
 
 
-use Depotwarehouse\OAuth2\Client\Provider\BattleNet;
-use Depotwarehouse\OAuth2\Client\Provider\SC2Provider;
-use Depotwarehouse\OAuth2\Client\Provider\WowProvider;
+use MetasenseLTD\OAuth2\Client\Provider\BattleNet;
+use MetasenseLTD\OAuth2\Client\Provider\SC2Provider;
+use MetasenseLTD\OAuth2\Client\Provider\WowProvider;
 use Illuminate\Support\ServiceProvider;
 
 class BattleNetOAuth2ServiceProvider extends ServiceProvider
