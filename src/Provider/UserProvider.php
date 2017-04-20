@@ -2,28 +2,25 @@
 
 namespace Depotwarehouse\OAuth2\Client\Provider;
 
-use Depotwarehouse\OAuth2\Client\Entity\SC2User;
+use Depotwarehouse\OAuth2\Client\Entity\BNetUser;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use League\OAuth2\Client\Token\AccessToken;
 
-class SC2Provider extends BattleNet
+class UserProvider extends BattleNet
 {
-
-    protected $entity = "sc2";
+    protected $entity = "user";
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return "https://{$this->region}.api.battle.net/sc2/profile/user?access_token={$token}";
+        return "https://{$this->region}.api.battle.net/account/user?access_token={$token}";
     }
 
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        $response = (array)($response['characters'][0]);
+        $response = (array)($response['characters']);
 
-        $user = new SC2User($response, $this->region);
+        $user = new BNetUser($response, $this->region);
 
         return $user;
     }
-
-
 }

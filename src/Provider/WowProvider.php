@@ -8,7 +8,7 @@ use League\OAuth2\Client\Token\AccessToken;
 class WowProvider extends BattleNet
 {
 
-    protected $game = "wow";
+    protected $entity = "wow";
 
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
